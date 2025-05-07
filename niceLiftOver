@@ -1,4 +1,4 @@
-S#!/usr/bin/perl
+#!/usr/bin/env perl
 
 ##########################################################################
 # Copyright 2014, Philip Ewels (phil.ewels@babraham.ac.uk)               #
@@ -255,6 +255,11 @@ foreach my $infile (@files){
 		chomp;
 		my @sections = split(/$delim/);
 		my $chr = $sections[$chrcol];
+		# the chain files all use chromsomes starting
+		# with chr
+		unless ($chr =~ /^chr/i) {
+		    $chr = "chr$chr";
+		}
 		my $start = $sections[$startcol];
 		my $end = $sections[$endcol];
 		my $position = "$chr:$start-$end\n";
