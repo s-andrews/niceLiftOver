@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+S#!/usr/bin/perl
 
 ##########################################################################
 # Copyright 2014, Philip Ewels (phil.ewels@babraham.ac.uk)               #
@@ -162,7 +162,7 @@ if(!defined($chrcol)){
 if(!defined($startcol)){
 	foreach my $i (0 .. $#cols){
 		if($cols[$i] =~ /start/i){
-			$chrcol = $i;
+			$startcol = $i;
 			last;
 		}
 	}
@@ -181,7 +181,7 @@ if(!defined($startcol)){
 if(!defined($endcol)){
 	foreach my $i (0 .. $#cols){
 		if($cols[$i] =~ /end/i){
-			$chrcol = $i;
+			$endcol = $i;
 			last;
 		}
 	}
