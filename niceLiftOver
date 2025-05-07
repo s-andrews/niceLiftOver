@@ -33,7 +33,7 @@ use lib "$FindBin::Bin/source";
 #
 # Command Line Options
 #
-my $skip = 0;
+my $skip = 1;
 my $chrcol;
 my $startcol;
 my $endcol;
